@@ -3,6 +3,7 @@ from application import app
 
 @app.route('/')
 def index():
+    print(app.config)
     return render_template('public/main/index.html',
                             title="Flask Application")
 @app.route('/about')
@@ -25,7 +26,6 @@ def variable():
     "nuts": 34
 		}
     numbers = [1,2,3,4,5,6,7,8,9,10]
-
     return render_template('public/main/variable.html',
                             name =my_name,
                             listname =listname,
