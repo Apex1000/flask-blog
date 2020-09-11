@@ -1,0 +1,26 @@
+{% extends "public/layout/base.html" %}
+{% block content %}
+
+<main role="main" class="container">
+    <h3>Single Variable</h3>
+    <h5> Hello {{ name }} </h5>
+    <hr>
+    <h3>List Variable</h3>
+    {% for name in listname %}
+    <h5> Hello {{ name }} </h5>
+    {% endfor %}
+    <hr>
+    <h3>Dictionaries</h3>
+    {% for name, prise in prises.items() %}
+    <h5>the cost of {{ name }} is {{ prise }}. </h5>
+    {% endfor %}
+    <hr>
+
+    <h3>Conditionals & comparison operators</h3>
+    {% for i in numbers%}
+    {% if i%2==0 %}
+    <h5>even {{i}}. </h5>
+    {% endif %}
+    {% endfor %}
+</main>
+{% endblock %}
